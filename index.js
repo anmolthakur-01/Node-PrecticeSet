@@ -6,7 +6,7 @@ app.get("/name", (req, res) => {
 });
 
 app.get("/college", (req, res) => {
-  res.send("BEANT COLLEGE OF ENGINEERING");
+  res.send("BEANT COLLEGE OF ENGINEERING AND TECHNOLOGY");
 });
 
 app.get("/course", (req, res) => {
