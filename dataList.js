@@ -1,23 +1,18 @@
 const data = [
   {
     id: 1,
-    name: "Alice",
-    tech: "JavaScript",
+    name: "alan",
+    tech: "js",
   },
   {
     id: 2,
-    name: "Bob",
-    tech: "Python",
+    name: "dharm",
+    tech: "html",
   },
   {
     id: 3,
-    name: "Charlie",
-    tech: "React",
-  },
-  {
-    id: 4,
-    name: "David",
-    tech: "Node",
+    name: "anmol",
+    tech: "react",
   },
 ];
 
