@@ -6,21 +6,26 @@ const Data = require("./dataList");
 app.get("/", (req, res) => {
   res.send("Welcome Node");
 });
-app.get("/profile", (req, res) => {
-  res.send("hey from profile");
-});
 
-//  Access using local module
+//  Create request to get student data using local module
 app.get("/dataList", (req, res) => {
   res.send(Data);
 });
 
 //  Create request to filter students data using Query String
-app.get("/singlestudent", (req, res) => {
+app.get("/filterquery", (req, res) => {
   let studentquery = Data.filter((element) => {
     return element.name == req.query.name;
   });
   res.send(studentquery);
+});
+
+//  Create request to filter student data using URL params
+app.get("/filterparams/:name", (req, res) => {
+  let studentparams = Data.filter((el) => {
+    return el.name == req.params.name;
+  });
+  res.send(studentparams);
 });
 
 app.listen(3100, (error) => {
