@@ -6,25 +6,25 @@ const data = require("./postdata");
 app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
 
-app.post("/sentdata", (req, res) => {
+app.post("/senddata", (req, res) => {
   let dataObj = {
     id: data.length + 1,
     name: req.body.name,
     tech: req.body.tech,
   };
   data.push(dataObj);
-  res.send("successfully sent");
+  res.send("successfully sent data");
 });
 
-app.post('/newdata', (req,res)=>{
-  newObj={
-    id: data.length+1,
+app.post("/newdata", (req, res) => {
+  newObj = {
+    id: data.length + 1,
     name: req.body.name,
-    tech: req.body.tech
-  }
+    tech: req.body.tech,
+  };
   data.push(newObj);
-  res.send("second data sent successfull")
-})
+  res.send("second data sent successfull");
+});
 
 app.get("/getdata", (req, res) => {
   res.send(data);
