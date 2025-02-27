@@ -14,10 +14,4 @@ app.get("/course", (req, res) => {
 });
 
 // Start server
-app.listen(3100, (error) => {
-  if (error) {
-    console.log("Error occur");
-  } else {
-    console.log("Server is running");
-  }
-});
+app.listen(1000);
